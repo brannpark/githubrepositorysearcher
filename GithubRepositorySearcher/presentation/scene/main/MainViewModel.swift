@@ -41,8 +41,12 @@ class MainViewModel: ObservableObject, RoutableViewModel {
             .store(in: &disposeBag)
     }
 
-    func didTap(item: Repository) {
+    func didTapRow(item: Repository) {
         router.send(.toWebScene(url: item.linkURL))
+    }
+
+    func didTapOwner(item: Repository) {
+        router.send(.toWebScene(url: item.ownerLinkURL))
     }
 }
 

@@ -38,7 +38,7 @@ struct MainView: RoutableView {
         ScrollView {
             LazyVStack(spacing: 0) {
                 ForEach(Array(viewModel.repositories.enumerated()), id: \.offset) { _, repo in
-                    listRow(item: repo)
+                    listRow(for: repo)
                     Color.gray.opacity(0.5).frame(height: 1)
                 }
             }
@@ -47,26 +47,32 @@ struct MainView: RoutableView {
         .frame(maxWidth: .infinity, maxHeight: .infinity)
     }
 
-    private func listRow(item: Repository) -> some View {
+    private func ownerImage(for item: Repository) -> some View {
+        AsyncImage(
+            url: item.ownerAvatarURL,
+            content: { image in
+                image.resizable()
+                    .aspectRatio(contentMode: .fill)
+                    .frame(width: 40, height: 40)
+                    .clipShape(Circle())
+                    .transition(.opacity.animation(.linear(duration: 0.3)))
+            },
+            placeholder: {
+                Color.gray.opacity(0.3)
+                    .frame(width: 40, height: 40)
+                    .clipShape(Circle())
+            }
+        ).onTapGesture {
+            viewModel.didTapOwner(item: item)
+        }
+    }
+
+    private func listRow(for item: Repository) -> some View {
         Button {
-            viewModel.didTap(item: item)
+            viewModel.didTapRow(item: item)
         } label: {
             HStack {
-                AsyncImage(
-                    url: item.ownerAvatarURL,
-                    content: { image in
-                        image.resizable()
-                            .aspectRatio(contentMode: .fill)
-                            .frame(width: 40, height: 40)
-                            .clipShape(Circle())
-                            .transition(.opacity.animation(.linear(duration: 0.3)))
-                    },
-                    placeholder: {
-                        Color.gray.opacity(0.3)
-                            .frame(width: 40, height: 40)
-                            .clipShape(Circle())
-                    }
-                )
+                ownerImage(for: item)
                 VStack(spacing: 5) {
                     HStack {
                         Text("\(item.owner)/\(item.name)")

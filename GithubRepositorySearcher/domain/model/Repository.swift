@@ -9,4 +9,13 @@ import Foundation
 
 struct Repository {
 
+    let id: Int
+    let name: String
+    let owner: String
+    let ownerAvatarURL: URL?
+    let ownerLinkURL: URL
+    let linkURL: URL
+    let description: String
+    let license: String
+    let starCount: Int
 }

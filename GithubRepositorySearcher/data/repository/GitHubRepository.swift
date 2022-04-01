@@ -16,8 +16,16 @@ protocol GitHubRepository {
 
 struct GitHubRepositoryImpl: GitHubRepository {
 
+    private let provider: MoyaProvider<GitHubAPI>
+
+    init(provider: MoyaProvider<GitHubAPI>) {
+        self.provider = provider
+    }
+
     func getRepositories(query: String) -> AnyPublisher<GitHubRepoDto, Error> {
-        // not implemented
-        fatalError()
+        return provider.requestPublisher(.getRepositories(query: query))
+            .map(GitHubRepoDto.self)
+            .mapError { $0 as Error }
+            .eraseToAnyPublisher()
     }
 }

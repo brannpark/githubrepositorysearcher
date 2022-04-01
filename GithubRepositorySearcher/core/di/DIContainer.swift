@@ -7,11 +7,39 @@
 
 import Foundation
 import Resolver
+import Moya
 
 extension Resolver: ResolverRegistering {
 
     public static func registerAllServices() {
-        register { GitHubRepositoryImpl() as GitHubRepository }
-        register { GetGitHubRepositoriesUsecaseImpl() as GetGitHubRepositoriesUsecase }
+        register(name: .timeoutInterval) { TimeInterval(6) }
+        register {
+            return MoyaProvider<GitHubAPI>(
+                requestClosure: { endpoint, done in
+                    do {
+                        var request = try endpoint.urlRequest()
+                        request.timeoutInterval = resolve(name: .timeoutInterval)
+                        done(.success(request))
+                    } catch {
+                        done(.failure(MoyaError.underlying(error, nil)))
+                    }
+                },
+                plugins: [
+                    NetworkLoggerPlugin(
+                        configuration: NetworkLoggerPlugin.Configuration(
+                            logOptions: .verbose
+                        )
+                    )
+                ]
+            )
+        }.scope(.application)
+
+        register { GitHubRepositoryImpl(provider: resolve()) as GitHubRepository }
+        register { GetGitHubRepositoriesUsecaseImpl(repository: resolve()) as GetGitHubRepositoriesUsecase }
     }
+}
+
+extension Resolver.Name {
+
+    static let timeoutInterval = Self("timeoutInterval")
 }

@@ -56,11 +56,11 @@ open class GetGitHubRepositoriesUsecaseMock: GetGitHubRepositoriesUsecase, Mock 
 
 
 
-    open func execute(query: String) -> AnyPublisher<Repository, Error> {
+    open func execute(query: String) -> AnyPublisher<[Repository], Error> {
         addInvocation(.m_execute__query_query(Parameter<String>.value(`query`)))
 		let perform = methodPerformValue(.m_execute__query_query(Parameter<String>.value(`query`))) as? (String) -> Void
 		perform?(`query`)
-		var __value: AnyPublisher<Repository, Error>
+		var __value: AnyPublisher<[Repository], Error>
 		do {
 		    __value = try methodReturnValue(.m_execute__query_query(Parameter<String>.value(`query`))).casted()
 		} catch {
@@ -104,13 +104,13 @@ open class GetGitHubRepositoriesUsecaseMock: GetGitHubRepositoriesUsecase, Mock 
         }
 
 
-        public static func execute(query: Parameter<String>, willReturn: AnyPublisher<Repository, Error>...) -> MethodStub {
+        public static func execute(query: Parameter<String>, willReturn: AnyPublisher<[Repository], Error>...) -> MethodStub {
             return Given(method: .m_execute__query_query(`query`), products: willReturn.map({ StubProduct.return($0 as Any) }))
         }
-        public static func execute(query: Parameter<String>, willProduce: (Stubber<AnyPublisher<Repository, Error>>) -> Void) -> MethodStub {
-            let willReturn: [AnyPublisher<Repository, Error>] = []
+        public static func execute(query: Parameter<String>, willProduce: (Stubber<AnyPublisher<[Repository], Error>>) -> Void) -> MethodStub {
+            let willReturn: [AnyPublisher<[Repository], Error>] = []
 			let given: Given = { return Given(method: .m_execute__query_query(`query`), products: willReturn.map({ StubProduct.return($0 as Any) })) }()
-			let stubber = given.stub(for: (AnyPublisher<Repository, Error>).self)
+			let stubber = given.stub(for: (AnyPublisher<[Repository], Error>).self)
 			willProduce(stubber)
 			return given
         }

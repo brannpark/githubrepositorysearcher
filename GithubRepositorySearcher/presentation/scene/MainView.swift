@@ -6,10 +6,18 @@
 //
 
 import SwiftUI
+import Combine
+import Resolver
 
 struct MainView: View {
+
     var body: some View {
-        EmptyView()
+        ZStack {
+
+        }
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
+        .background(Color.gray)
+
     }
 }
 

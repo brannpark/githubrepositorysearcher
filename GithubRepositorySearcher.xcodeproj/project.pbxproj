@@ -1,0 +1,746 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		435332E3343DD19A91DEEA13 /* Pods_GithubRepositorySearcher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEE3CFF6D172CEB575772A10 /* Pods_GithubRepositorySearcher.framework */; };
+		7538E9E727F6FCC6001133AA /* GithubRepositorySearcherApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7538E9E627F6FCC6001133AA /* GithubRepositorySearcherApp.swift */; };
+		7538E9E927F6FCC6001133AA /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7538E9E827F6FCC6001133AA /* MainView.swift */; };
+		7538E9EB27F6FCC8001133AA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7538E9EA27F6FCC8001133AA /* Assets.xcassets */; };
+		7538E9EE27F6FCC8001133AA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7538E9ED27F6FCC8001133AA /* Preview Assets.xcassets */; };
+		7538EA1D27F7006E001133AA /* DIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7538EA1C27F7006E001133AA /* DIContainer.swift */; };
+		7538EA1F27F7010C001133AA /* GitHubRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7538EA1E27F7010C001133AA /* GitHubRepository.swift */; };
+		7538EA2327F701AC001133AA /* GitHubAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7538EA2227F701AC001133AA /* GitHubAPI.swift */; };
+		7538EA2627F702F9001133AA /* Routable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7538EA2527F702F9001133AA /* Routable.swift */; };
+		7538EA2827F70328001133AA /* CombineRelay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7538EA2727F70328001133AA /* CombineRelay.swift */; };
+		7538EA2A27F70445001133AA /* GitHubRepoDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7538EA2927F70445001133AA /* GitHubRepoDto.swift */; };
+		7538EA2C27F704CA001133AA /* GetGitHubRepositoriesUsecase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7538EA2B27F704CA001133AA /* GetGitHubRepositoriesUsecase.swift */; };
+		7538EA2E27F7057D001133AA /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7538EA2D27F7057D001133AA /* Repository.swift */; };
+		BA63749F86C7747CFA5FD0CA /* Pods_GithubRepositorySearcherTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A6291A295292CAA0EFCED49 /* Pods_GithubRepositorySearcherTests.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		7538E9F427F6FCC8001133AA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7538E9DB27F6FCC6001133AA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7538E9E227F6FCC6001133AA;
+			remoteInfo = GithubRepositorySearcher;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		57DC65CC340EA9AF52BEDC26 /* Pods-GithubRepositorySearcher-GithubRepositorySearcherUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GithubRepositorySearcher-GithubRepositorySearcherUITests.release.xcconfig"; path = "Target Support Files/Pods-GithubRepositorySearcher-GithubRepositorySearcherUITests/Pods-GithubRepositorySearcher-GithubRepositorySearcherUITests.release.xcconfig"; sourceTree = "<group>"; };
+		5A6291A295292CAA0EFCED49 /* Pods_GithubRepositorySearcherTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GithubRepositorySearcherTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7538E9E327F6FCC6001133AA /* GithubRepositorySearcher.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GithubRepositorySearcher.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7538E9E627F6FCC6001133AA /* GithubRepositorySearcherApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubRepositorySearcherApp.swift; sourceTree = "<group>"; };
+		7538E9E827F6FCC6001133AA /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		7538E9EA27F6FCC8001133AA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		7538E9ED27F6FCC8001133AA /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		7538E9F327F6FCC8001133AA /* GithubRepositorySearcherTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GithubRepositorySearcherTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7538EA1C27F7006E001133AA /* DIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DIContainer.swift; sourceTree = "<group>"; };
+		7538EA1E27F7010C001133AA /* GitHubRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubRepository.swift; sourceTree = "<group>"; };
+		7538EA2227F701AC001133AA /* GitHubAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubAPI.swift; sourceTree = "<group>"; };
+		7538EA2527F702F9001133AA /* Routable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Routable.swift; sourceTree = "<group>"; };
+		7538EA2727F70328001133AA /* CombineRelay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombineRelay.swift; sourceTree = "<group>"; };
+		7538EA2927F70445001133AA /* GitHubRepoDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubRepoDto.swift; sourceTree = "<group>"; };
+		7538EA2B27F704CA001133AA /* GetGitHubRepositoriesUsecase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetGitHubRepositoriesUsecase.swift; sourceTree = "<group>"; };
+		7538EA2D27F7057D001133AA /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
+		9A9256E33E3059FC5CF9C048 /* Pods-GithubRepositorySearcher.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GithubRepositorySearcher.debug.xcconfig"; path = "Target Support Files/Pods-GithubRepositorySearcher/Pods-GithubRepositorySearcher.debug.xcconfig"; sourceTree = "<group>"; };
+		9B3606A18F9CCEB35C52CF4A /* Pods-GithubRepositorySearcher.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GithubRepositorySearcher.release.xcconfig"; path = "Target Support Files/Pods-GithubRepositorySearcher/Pods-GithubRepositorySearcher.release.xcconfig"; sourceTree = "<group>"; };
+		A0A30B28CEE81BAE58894FD9 /* Pods-GithubRepositorySearcherTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GithubRepositorySearcherTests.release.xcconfig"; path = "Target Support Files/Pods-GithubRepositorySearcherTests/Pods-GithubRepositorySearcherTests.release.xcconfig"; sourceTree = "<group>"; };
+		CCE6D2B70BE4D05AF0F8F1E4 /* Pods-GithubRepositorySearcher-GithubRepositorySearcherUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GithubRepositorySearcher-GithubRepositorySearcherUITests.debug.xcconfig"; path = "Target Support Files/Pods-GithubRepositorySearcher-GithubRepositorySearcherUITests/Pods-GithubRepositorySearcher-GithubRepositorySearcherUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		DEE3CFF6D172CEB575772A10 /* Pods_GithubRepositorySearcher.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GithubRepositorySearcher.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		ECC69D2B4FB6034E3B37E102 /* Pods-GithubRepositorySearcherTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GithubRepositorySearcherTests.debug.xcconfig"; path = "Target Support Files/Pods-GithubRepositorySearcherTests/Pods-GithubRepositorySearcherTests.debug.xcconfig"; sourceTree = "<group>"; };
+		EF902B52C1B56F96EF0CE96F /* Pods_GithubRepositorySearcher_GithubRepositorySearcherUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GithubRepositorySearcher_GithubRepositorySearcherUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7538E9E027F6FCC6001133AA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				435332E3343DD19A91DEEA13 /* Pods_GithubRepositorySearcher.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7538E9F027F6FCC8001133AA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BA63749F86C7747CFA5FD0CA /* Pods_GithubRepositorySearcherTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4326F68119140BD31981F008 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9A9256E33E3059FC5CF9C048 /* Pods-GithubRepositorySearcher.debug.xcconfig */,
+				9B3606A18F9CCEB35C52CF4A /* Pods-GithubRepositorySearcher.release.xcconfig */,
+				CCE6D2B70BE4D05AF0F8F1E4 /* Pods-GithubRepositorySearcher-GithubRepositorySearcherUITests.debug.xcconfig */,
+				57DC65CC340EA9AF52BEDC26 /* Pods-GithubRepositorySearcher-GithubRepositorySearcherUITests.release.xcconfig */,
+				ECC69D2B4FB6034E3B37E102 /* Pods-GithubRepositorySearcherTests.debug.xcconfig */,
+				A0A30B28CEE81BAE58894FD9 /* Pods-GithubRepositorySearcherTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		579C389E43D4B14D7C918765 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DEE3CFF6D172CEB575772A10 /* Pods_GithubRepositorySearcher.framework */,
+				EF902B52C1B56F96EF0CE96F /* Pods_GithubRepositorySearcher_GithubRepositorySearcherUITests.framework */,
+				5A6291A295292CAA0EFCED49 /* Pods_GithubRepositorySearcherTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7538E9DA27F6FCC6001133AA = {
+			isa = PBXGroup;
+			children = (
+				7538E9E527F6FCC6001133AA /* GithubRepositorySearcher */,
+				7538E9F627F6FCC8001133AA /* GithubRepositorySearcherTests */,
+				7538E9E427F6FCC6001133AA /* Products */,
+				4326F68119140BD31981F008 /* Pods */,
+				579C389E43D4B14D7C918765 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		7538E9E427F6FCC6001133AA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7538E9E327F6FCC6001133AA /* GithubRepositorySearcher.app */,
+				7538E9F327F6FCC8001133AA /* GithubRepositorySearcherTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7538E9E527F6FCC6001133AA /* GithubRepositorySearcher */ = {
+			isa = PBXGroup;
+			children = (
+				7538EA1927F7002B001133AA /* core */,
+				7538EA1427F6FFD1001133AA /* data */,
+				7538EA1327F6FFC7001133AA /* domain */,
+				7538EA1127F6FF8F001133AA /* presentation */,
+				7538E9EA27F6FCC8001133AA /* Assets.xcassets */,
+				7538E9EC27F6FCC8001133AA /* Preview Content */,
+			);
+			path = GithubRepositorySearcher;
+			sourceTree = "<group>";
+		};
+		7538E9EC27F6FCC8001133AA /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				7538E9ED27F6FCC8001133AA /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		7538E9F627F6FCC8001133AA /* GithubRepositorySearcherTests */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = GithubRepositorySearcherTests;
+			sourceTree = "<group>";
+		};
+		7538EA1127F6FF8F001133AA /* presentation */ = {
+			isa = PBXGroup;
+			children = (
+				7538EA1227F6FF9F001133AA /* scene */,
+			);
+			path = presentation;
+			sourceTree = "<group>";
+		};
+		7538EA1227F6FF9F001133AA /* scene */ = {
+			isa = PBXGroup;
+			children = (
+				7538E9E827F6FCC6001133AA /* MainView.swift */,
+			);
+			path = scene;
+			sourceTree = "<group>";
+		};
+		7538EA1327F6FFC7001133AA /* domain */ = {
+			isa = PBXGroup;
+			children = (
+				7538EA1727F6FFE7001133AA /* model */,
+				7538EA1627F6FFE1001133AA /* usecase */,
+			);
+			path = domain;
+			sourceTree = "<group>";
+		};
+		7538EA1427F6FFD1001133AA /* data */ = {
+			isa = PBXGroup;
+			children = (
+				7538EA2027F7014D001133AA /* remote */,
+				7538EA1827F6FFED001133AA /* model */,
+				7538EA1527F6FFD9001133AA /* repository */,
+			);
+			path = data;
+			sourceTree = "<group>";
+		};
+		7538EA1527F6FFD9001133AA /* repository */ = {
+			isa = PBXGroup;
+			children = (
+				7538EA1E27F7010C001133AA /* GitHubRepository.swift */,
+			);
+			path = repository;
+			sourceTree = "<group>";
+		};
+		7538EA1627F6FFE1001133AA /* usecase */ = {
+			isa = PBXGroup;
+			children = (
+				7538EA2B27F704CA001133AA /* GetGitHubRepositoriesUsecase.swift */,
+			);
+			path = usecase;
+			sourceTree = "<group>";
+		};
+		7538EA1727F6FFE7001133AA /* model */ = {
+			isa = PBXGroup;
+			children = (
+				7538EA2D27F7057D001133AA /* Repository.swift */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		7538EA1827F6FFED001133AA /* model */ = {
+			isa = PBXGroup;
+			children = (
+				7538EA2927F70445001133AA /* GitHubRepoDto.swift */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		7538EA1927F7002B001133AA /* core */ = {
+			isa = PBXGroup;
+			children = (
+				7538E9E627F6FCC6001133AA /* GithubRepositorySearcherApp.swift */,
+				7538EA2427F702DF001133AA /* architecture */,
+				7538EA1A27F7002F001133AA /* di */,
+			);
+			path = core;
+			sourceTree = "<group>";
+		};
+		7538EA1A27F7002F001133AA /* di */ = {
+			isa = PBXGroup;
+			children = (
+				7538EA1C27F7006E001133AA /* DIContainer.swift */,
+			);
+			path = di;
+			sourceTree = "<group>";
+		};
+		7538EA2027F7014D001133AA /* remote */ = {
+			isa = PBXGroup;
+			children = (
+				7538EA2127F7019E001133AA /* api */,
+			);
+			path = remote;
+			sourceTree = "<group>";
+		};
+		7538EA2127F7019E001133AA /* api */ = {
+			isa = PBXGroup;
+			children = (
+				7538EA2227F701AC001133AA /* GitHubAPI.swift */,
+			);
+			path = api;
+			sourceTree = "<group>";
+		};
+		7538EA2427F702DF001133AA /* architecture */ = {
+			isa = PBXGroup;
+			children = (
+				7538EA2527F702F9001133AA /* Routable.swift */,
+				7538EA2727F70328001133AA /* CombineRelay.swift */,
+			);
+			path = architecture;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		7538E9E227F6FCC6001133AA /* GithubRepositorySearcher */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7538EA0727F6FCC8001133AA /* Build configuration list for PBXNativeTarget "GithubRepositorySearcher" */;
+			buildPhases = (
+				37AED7634C49E7490DADE469 /* [CP] Check Pods Manifest.lock */,
+				7538EA1027F6FEFA001133AA /* ShellScript */,
+				7538E9DF27F6FCC6001133AA /* Sources */,
+				7538E9E027F6FCC6001133AA /* Frameworks */,
+				7538E9E127F6FCC6001133AA /* Resources */,
+				3C4E21C39B5E9E0BE06E08CF /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GithubRepositorySearcher;
+			productName = GithubRepositorySearcher;
+			productReference = 7538E9E327F6FCC6001133AA /* GithubRepositorySearcher.app */;
+			productType = "com.apple.product-type.application";
+		};
+		7538E9F227F6FCC8001133AA /* GithubRepositorySearcherTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7538EA0A27F6FCC8001133AA /* Build configuration list for PBXNativeTarget "GithubRepositorySearcherTests" */;
+			buildPhases = (
+				860C74063D041557C2C8509E /* [CP] Check Pods Manifest.lock */,
+				7538E9EF27F6FCC8001133AA /* Sources */,
+				7538E9F027F6FCC8001133AA /* Frameworks */,
+				7538E9F127F6FCC8001133AA /* Resources */,
+				1C5A4F49B88A96BEBCC748F5 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7538E9F527F6FCC8001133AA /* PBXTargetDependency */,
+			);
+			name = GithubRepositorySearcherTests;
+			productName = GithubRepositorySearcherTests;
+			productReference = 7538E9F327F6FCC8001133AA /* GithubRepositorySearcherTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7538E9DB27F6FCC6001133AA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1320;
+				LastUpgradeCheck = 1320;
+				TargetAttributes = {
+					7538E9E227F6FCC6001133AA = {
+						CreatedOnToolsVersion = 13.2.1;
+					};
+					7538E9F227F6FCC8001133AA = {
+						CreatedOnToolsVersion = 13.2.1;
+						TestTargetID = 7538E9E227F6FCC6001133AA;
+					};
+				};
+			};
+			buildConfigurationList = 7538E9DE27F6FCC6001133AA /* Build configuration list for PBXProject "GithubRepositorySearcher" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 7538E9DA27F6FCC6001133AA;
+			productRefGroup = 7538E9E427F6FCC6001133AA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7538E9E227F6FCC6001133AA /* GithubRepositorySearcher */,
+				7538E9F227F6FCC8001133AA /* GithubRepositorySearcherTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7538E9E127F6FCC6001133AA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7538E9EE27F6FCC8001133AA /* Preview Assets.xcassets in Resources */,
+				7538E9EB27F6FCC8001133AA /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7538E9F127F6FCC8001133AA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1C5A4F49B88A96BEBCC748F5 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GithubRepositorySearcherTests/Pods-GithubRepositorySearcherTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GithubRepositorySearcherTests/Pods-GithubRepositorySearcherTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GithubRepositorySearcherTests/Pods-GithubRepositorySearcherTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		37AED7634C49E7490DADE469 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GithubRepositorySearcher-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3C4E21C39B5E9E0BE06E08CF /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GithubRepositorySearcher/Pods-GithubRepositorySearcher-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GithubRepositorySearcher/Pods-GithubRepositorySearcher-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GithubRepositorySearcher/Pods-GithubRepositorySearcher-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7538EA1027F6FEFA001133AA /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n${PODS_ROOT}/SwiftLint/swiftlint\n";
+		};
+		860C74063D041557C2C8509E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GithubRepositorySearcherTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7538E9DF27F6FCC6001133AA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7538EA1F27F7010C001133AA /* GitHubRepository.swift in Sources */,
+				7538EA2627F702F9001133AA /* Routable.swift in Sources */,
+				7538E9E927F6FCC6001133AA /* MainView.swift in Sources */,
+				7538EA2827F70328001133AA /* CombineRelay.swift in Sources */,
+				7538EA2A27F70445001133AA /* GitHubRepoDto.swift in Sources */,
+				7538EA2C27F704CA001133AA /* GetGitHubRepositoriesUsecase.swift in Sources */,
+				7538EA1D27F7006E001133AA /* DIContainer.swift in Sources */,
+				7538EA2E27F7057D001133AA /* Repository.swift in Sources */,
+				7538EA2327F701AC001133AA /* GitHubAPI.swift in Sources */,
+				7538E9E727F6FCC6001133AA /* GithubRepositorySearcherApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7538E9EF27F6FCC8001133AA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		7538E9F527F6FCC8001133AA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7538E9E227F6FCC6001133AA /* GithubRepositorySearcher */;
+			targetProxy = 7538E9F427F6FCC8001133AA /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		7538EA0527F6FCC8001133AA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		7538EA0627F6FCC8001133AA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		7538EA0827F6FCC8001133AA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9A9256E33E3059FC5CF9C048 /* Pods-GithubRepositorySearcher.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"GithubRepositorySearcher/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = brannpark.GithubRepositorySearcher;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		7538EA0927F6FCC8001133AA /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9B3606A18F9CCEB35C52CF4A /* Pods-GithubRepositorySearcher.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"GithubRepositorySearcher/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = brannpark.GithubRepositorySearcher;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		7538EA0B27F6FCC8001133AA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = ECC69D2B4FB6034E3B37E102 /* Pods-GithubRepositorySearcherTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = brannpark.GithubRepositorySearcherTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GithubRepositorySearcher.app/GithubRepositorySearcher";
+			};
+			name = Debug;
+		};
+		7538EA0C27F6FCC8001133AA /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A0A30B28CEE81BAE58894FD9 /* Pods-GithubRepositorySearcherTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = brannpark.GithubRepositorySearcherTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GithubRepositorySearcher.app/GithubRepositorySearcher";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7538E9DE27F6FCC6001133AA /* Build configuration list for PBXProject "GithubRepositorySearcher" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7538EA0527F6FCC8001133AA /* Debug */,
+				7538EA0627F6FCC8001133AA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7538EA0727F6FCC8001133AA /* Build configuration list for PBXNativeTarget "GithubRepositorySearcher" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7538EA0827F6FCC8001133AA /* Debug */,
+				7538EA0927F6FCC8001133AA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7538EA0A27F6FCC8001133AA /* Build configuration list for PBXNativeTarget "GithubRepositorySearcherTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7538EA0B27F6FCC8001133AA /* Debug */,
+				7538EA0C27F6FCC8001133AA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 7538E9DB27F6FCC6001133AA /* Project object */;
+}

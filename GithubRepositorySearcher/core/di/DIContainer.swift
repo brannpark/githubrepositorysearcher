@@ -36,6 +36,7 @@ extension Resolver: ResolverRegistering {
 
         register { GitHubRepositoryImpl(provider: resolve()) as GitHubRepository }
         register { GetGitHubRepositoriesUsecaseImpl(repository: resolve()) as GetGitHubRepositoriesUsecase }
+        register { MainViewModel(getGitHubRepositoriesUsecase: resolve()) }
     }
 }
 

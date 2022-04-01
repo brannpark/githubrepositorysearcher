@@ -23,6 +23,8 @@
 		7538EA3327F70C3C001133AA /* TestGitHubRepositoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7538EA3227F70C3C001133AA /* TestGitHubRepositoryImpl.swift */; };
 		7538EA3527F70D61001133AA /* Mock.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7538EA3427F70D61001133AA /* Mock.generated.swift */; };
 		7538EA3927F71E7A001133AA /* TestGetGitHubRepositoriesUsecaseImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7538EA3827F71E7A001133AA /* TestGetGitHubRepositoriesUsecaseImpl.swift */; };
+		7538EA3D27F739FA001133AA /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7538EA3C27F739FA001133AA /* MainViewModel.swift */; };
+		7538EA3F27F73A5E001133AA /* InjectedStateObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7538EA3E27F73A5E001133AA /* InjectedStateObject.swift */; };
 		BA63749F86C7747CFA5FD0CA /* Pods_GithubRepositorySearcherTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A6291A295292CAA0EFCED49 /* Pods_GithubRepositorySearcherTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -56,6 +58,8 @@
 		7538EA3227F70C3C001133AA /* TestGitHubRepositoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestGitHubRepositoryImpl.swift; sourceTree = "<group>"; };
 		7538EA3427F70D61001133AA /* Mock.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mock.generated.swift; sourceTree = "<group>"; };
 		7538EA3827F71E7A001133AA /* TestGetGitHubRepositoriesUsecaseImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestGetGitHubRepositoriesUsecaseImpl.swift; sourceTree = "<group>"; };
+		7538EA3C27F739FA001133AA /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		7538EA3E27F73A5E001133AA /* InjectedStateObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InjectedStateObject.swift; sourceTree = "<group>"; };
 		9A9256E33E3059FC5CF9C048 /* Pods-GithubRepositorySearcher.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GithubRepositorySearcher.debug.xcconfig"; path = "Target Support Files/Pods-GithubRepositorySearcher/Pods-GithubRepositorySearcher.debug.xcconfig"; sourceTree = "<group>"; };
 		9B3606A18F9CCEB35C52CF4A /* Pods-GithubRepositorySearcher.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GithubRepositorySearcher.release.xcconfig"; path = "Target Support Files/Pods-GithubRepositorySearcher/Pods-GithubRepositorySearcher.release.xcconfig"; sourceTree = "<group>"; };
 		A0A30B28CEE81BAE58894FD9 /* Pods-GithubRepositorySearcherTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GithubRepositorySearcherTests.release.xcconfig"; path = "Target Support Files/Pods-GithubRepositorySearcherTests/Pods-GithubRepositorySearcherTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -170,7 +174,7 @@
 		7538EA1227F6FF9F001133AA /* scene */ = {
 			isa = PBXGroup;
 			children = (
-				7538E9E827F6FCC6001133AA /* MainView.swift */,
+				7538EA3B27F739F0001133AA /* main */,
 			);
 			path = scene;
 			sourceTree = "<group>";
@@ -240,6 +244,7 @@
 			isa = PBXGroup;
 			children = (
 				7538EA1C27F7006E001133AA /* DIContainer.swift */,
+				7538EA3E27F73A5E001133AA /* InjectedStateObject.swift */,
 			);
 			path = di;
 			sourceTree = "<group>";
@@ -283,6 +288,15 @@
 				7538EA3827F71E7A001133AA /* TestGetGitHubRepositoriesUsecaseImpl.swift */,
 			);
 			path = usecase;
+			sourceTree = "<group>";
+		};
+		7538EA3B27F739F0001133AA /* main */ = {
+			isa = PBXGroup;
+			children = (
+				7538E9E827F6FCC6001133AA /* MainView.swift */,
+				7538EA3C27F739FA001133AA /* MainViewModel.swift */,
+			);
+			path = main;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -517,6 +531,8 @@
 				7538EA2E27F7057D001133AA /* Repository.swift in Sources */,
 				7538EA2327F701AC001133AA /* GitHubAPI.swift in Sources */,
 				7538E9E727F6FCC6001133AA /* GithubRepositorySearcherApp.swift in Sources */,
+				7538EA3F27F73A5E001133AA /* InjectedStateObject.swift in Sources */,
+				7538EA3D27F739FA001133AA /* MainViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -10,12 +10,12 @@ import Combine
 // sourcery: AutoMockable
 protocol GetGitHubRepositoriesUsecase {
 
-    func execute(query: String) -> AnyPublisher<Repository, Error>
+    func execute(query: String) -> AnyPublisher<[Repository], Error>
 }
 
 struct GetGitHubRepositoriesUsecaseImpl: GetGitHubRepositoriesUsecase {
 
-    func execute(query: String) -> AnyPublisher<Repository, Error> {
+    func execute(query: String) -> AnyPublisher<[Repository], Error> {
         // not implemented
         fatalError()
     }

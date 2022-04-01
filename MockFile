@@ -1,0 +1,13 @@
+sourceryCommand: sourcery
+sourceryTemplate: null
+BaeminMartTests:
+  sources:
+    include:
+    - ./GithubRepositorySearcher
+  output: ./GithubRepositorySearcherTests/Mock.generated.swift
+  targets:
+  - GithubRepositorySearcherTests
+  testable:
+  - GithubRepositorySearcher
+  import:
+  - Combine

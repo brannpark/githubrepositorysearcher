@@ -37,16 +37,18 @@ struct MainView: RoutableView {
     }
 
     private var listView: some View {
-        ScrollView {
-            LazyVStack(spacing: 0) {
-                ForEach(Array(viewModel.repositories.enumerated()), id: \.offset) { _, repo in
-                    listRow(for: repo)
-                    Color.gray.opacity(0.5).frame(height: 1)
-                }
+        List {
+            ForEach(Array(viewModel.repositories.enumerated()), id: \.offset) { _, repo in
+                listRow(for: repo)
             }
-            .frame(maxWidth: .infinity)
+            .listRowSeparator(.hidden)
+            .listRowInsets(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
+            .background(Color.white)
+            .overlay(Color.gray.opacity(0.4).frame(maxWidth: .infinity, maxHeight: 1), alignment: .bottom)
         }
-        .frame(maxWidth: .infinity, maxHeight: .infinity)
+        .listStyle(PlainListStyle())
+        .environment(\.defaultMinListRowHeight, 0)
+        .environment(\.defaultMinListHeaderHeight, 0)
     }
 
     private func errorView(for error: Error) -> some View {
@@ -115,6 +117,7 @@ struct MainView: RoutableView {
             .frame(maxWidth: .infinity, alignment: .leading)
             .padding()
         }
+        .buttonStyle(ButtonPressedStyle())
     }
 
     private func headerView(safeAreaInsetTop: CGFloat) -> some View {

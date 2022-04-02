@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Repository {
+struct Repository: Equatable {
 
     let id: Int
     let name: String

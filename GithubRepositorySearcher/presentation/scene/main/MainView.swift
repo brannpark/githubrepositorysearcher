@@ -13,13 +13,16 @@ struct MainView: RoutableView {
 
     @InjectedStateObject var viewModel: MainViewModel
     @Environment(\.openURL) var openURL
-    @State private var query = ""
 
     var content: some View {
         GeometryReader { proxy in
             VStack(spacing: 0) {
                 headerView(safeAreaInsetTop: proxy.safeAreaInsets.top)
-                listView
+                if let error = viewModel.error {
+                    errorView(for: error)
+                } else {
+                    listView
+                }
             }
             .edgesIgnoringSafeArea(.top)
             .frame(maxWidth: .infinity, maxHeight: .infinity)
@@ -29,8 +32,7 @@ struct MainView: RoutableView {
             )
         }
         .onAppear {
-            query = "Moya"
-            viewModel.submit(searchQuery: query)
+            viewModel.onAppear()
         }
     }
 
@@ -43,6 +45,18 @@ struct MainView: RoutableView {
                 }
             }
             .frame(maxWidth: .infinity)
+        }
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
+    }
+
+    private func errorView(for error: Error) -> some View {
+        ZStack {
+            switch error {
+            case MainViewModel.Errors.notFound:
+                Text("저장소를 찾을 수 없습니다.")
+            default:
+                Text("일시적인 오류입니다.\n다시 시도해주세요.")
+            }
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
     }
@@ -106,9 +120,9 @@ struct MainView: RoutableView {
     private func headerView(safeAreaInsetTop: CGFloat) -> some View {
         VStack(spacing: 0.1) {
             Spacer(minLength: 0).frame(height: safeAreaInsetTop)
-            TextField("GitHub 저장소 검색", text: $query)
+            TextField("GitHub 저장소 검색", text: $viewModel.query)
                 .onSubmit {
-                    viewModel.submit(searchQuery: query)
+                    viewModel.submitSearch()
                 }
                 .padding()
                 .frame(maxWidth: .infinity)

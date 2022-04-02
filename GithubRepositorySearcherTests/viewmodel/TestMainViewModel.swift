@@ -39,6 +39,16 @@ class TestMainViewModel: QuickSpec {
                 viewModel = .init(getGitHubRepositoriesUsecase: getGitHubRepositoriesUsecase)
             }
 
+            context("빈 검색어가 Submit되면") {
+                beforeEach {
+                    viewModel.query = "     \n    "
+                    viewModel.submitSearch()
+                }
+                it("GitHub 저장소 검색 Usecase가 실행되지 않아야 한다") {
+                    Verify(getGitHubRepositoriesUsecase, 0, .execute(query: .any))
+                }
+            }
+
             context("검색어가 Submit되면 (성공시+결과있음)") {
                 let searchQuery = "Moya"
                 var dataSourceRecorder: Recorder<[Repository], Never>!

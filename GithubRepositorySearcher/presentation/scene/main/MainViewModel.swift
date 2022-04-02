@@ -28,7 +28,11 @@ class MainViewModel: ObservableObject, RoutableViewModel {
     }
 
     func submitSearch() {
-        getGitHubRepositoriesUsecase.execute(query: query)
+        let searchQuery = query.trimmingCharacters(in: .whitespacesAndNewlines)
+        guard !searchQuery.isEmpty else {
+            return
+        }
+        getGitHubRepositoriesUsecase.execute(query: searchQuery)
             .handleEvents(receiveSubscription: { [weak self] _ in
                 self?.repositories = []
                 self?.error = nil

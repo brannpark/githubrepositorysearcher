@@ -1,6 +1,6 @@
 sourceryCommand: sourcery
 sourceryTemplate: null
-BaeminMartTests:
+GithubRepositorySearcherTests:
   sources:
     include:
     - ./GithubRepositorySearcher
